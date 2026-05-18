@@ -1,0 +1,390 @@
+:root {
+  color: #172026;
+  background: #eef2f5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-page {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.12), transparent 45%),
+    linear-gradient(315deg, rgba(16, 185, 129, 0.14), transparent 40%),
+    #eef2f5;
+  display: flex;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-panel {
+  background: #ffffff;
+  border: 1px solid #d9e1e7;
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 360px;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 32px;
+  width: 100%;
+}
+
+.login-copy {
+  align-content: center;
+  display: grid;
+  gap: 18px;
+}
+
+.login-copy h1,
+.page-header h2 {
+  font-size: clamp(32px, 6vw, 58px);
+  line-height: 1;
+  margin: 0;
+}
+
+.login-copy p {
+  color: #4b5b66;
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.demo-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.demo-grid span {
+  background: #f3f7fa;
+  border: 1px solid #dfe7ed;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.login-form,
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  color: #40505b;
+  display: grid;
+  font-size: 13px;
+  gap: 6px;
+  text-transform: uppercase;
+}
+
+input {
+  background: #ffffff;
+  border: 1px solid #cbd5dc;
+  border-radius: 6px;
+  color: #172026;
+  min-height: 42px;
+  outline: none;
+  padding: 10px 12px;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+}
+
+.primary-button,
+.ghost-button,
+.danger-button {
+  align-items: center;
+  border: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-button:disabled,
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.ghost-button {
+  background: #edf2f6;
+  color: #172026;
+}
+
+.danger-button {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #991b1b;
+  padding: 10px 12px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #172026;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px;
+}
+
+.brand,
+.profile {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.brand span,
+.profile small {
+  color: #aebbc5;
+  display: block;
+  font-size: 13px;
+}
+
+.profile {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: auto;
+  padding: 12px;
+}
+
+.content {
+  padding: 28px;
+}
+
+.page-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 16px;
+}
+
+.page-header h2 {
+  font-size: clamp(28px, 5vw, 44px);
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.teacher-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1fr);
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d9e1e7;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.marks-panel {
+  grid-column: 1 / -1;
+}
+
+.panel h3 {
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+
+.panel-tools {
+  margin-bottom: 12px;
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.search input {
+  width: 100%;
+}
+
+.student-list {
+  display: grid;
+  gap: 8px;
+  min-height: 280px;
+}
+
+.student-row {
+  background: #f8fafc;
+  border: 1px solid #dfe7ed;
+  border-radius: 6px;
+  color: #172026;
+  display: grid;
+  gap: 3px;
+  padding: 12px;
+  text-align: left;
+}
+
+.student-row.active {
+  background: #eaf1ff;
+  border-color: #2563eb;
+}
+
+.student-row span,
+.mark-row span {
+  color: #60717d;
+}
+
+.pagination,
+.button-row,
+.mark-row,
+.mark-form {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination {
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.pagination button,
+.mark-row button {
+  align-items: center;
+  background: #edf2f6;
+  border: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}
+
+.button-row {
+  flex-wrap: wrap;
+}
+
+.marks-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.mark-row {
+  background: #f8fafc;
+  border: 1px solid #dfe7ed;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.mark-row div {
+  display: grid;
+  flex: 1;
+}
+
+.mark-form {
+  flex-wrap: wrap;
+}
+
+.mark-form input {
+  flex: 1 1 180px;
+}
+
+.average {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  color: #065f46;
+  display: grid;
+  min-width: 130px;
+  padding: 10px 14px;
+}
+
+.average span {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.average strong {
+  font-size: 24px;
+}
+
+.student-marks-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.subject-card {
+  background: #ffffff;
+  border: 1px solid #d9e1e7;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.subject-card strong {
+  font-size: 44px;
+  line-height: 1;
+}
+
+@media (max-width: 860px) {
+  .login-panel,
+  .app-shell,
+  .teacher-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: auto;
+  }
+
+  .content {
+    padding: 18px;
+  }
+
+  .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
