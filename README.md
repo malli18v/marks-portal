@@ -125,3 +125,74 @@ JDBC URL:
 ```text
 jdbc:h2:mem:marksdb
 ```
+## Docker
+
+Build and run the full application with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Then open:
+
+```text
+http://localhost
+```
+
+The frontend Nginx container serves React and proxies `/api` requests to the Spring Boot backend container.
+
+## AWS EC2 Deployment
+
+This is the simplest AWS deployment path for this project.
+
+1. Create an EC2 instance.
+   - Recommended AMI: Ubuntu Server 22.04 LTS or 24.04 LTS
+   - Instance size for demo: `t2.micro` or `t3.micro`
+   - Security group inbound rules: SSH `22` from your IP, HTTP `80` from anywhere
+
+2. SSH into the instance:
+
+```bash
+ssh -i your-key.pem ubuntu@your-ec2-public-ip
+```
+
+3. Install Docker and Git:
+
+```bash
+sudo apt update
+sudo apt install -y docker.io docker-compose-v2 git
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+
+4. Clone the repository:
+
+```bash
+git clone https://github.com/malli18v/marks-portal.git
+cd marks-portal
+```
+
+5. Start the app:
+
+```bash
+export JWT_SECRET="replace-with-a-long-random-secret"
+docker compose up --build -d
+```
+
+6. Open the app:
+
+```text
+http://your-ec2-public-ip
+```
+
+Useful server commands:
+
+```bash
+docker compose ps
+docker compose logs -f
+docker compose down
+git pull
+docker compose up --build -d
+```
+
+For a production deployment, replace the in-memory H2 database with Amazon RDS PostgreSQL or MySQL so data survives container restarts.
