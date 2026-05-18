@@ -23,6 +23,11 @@ New students created by the teacher can log in with their roll number. If no pas
 
 ## Backend
 
+Requirements:
+
+- Java 17 or newer
+- Maven
+
 ```bash
 cd backend
 mvn spring-boot:run
@@ -49,6 +54,11 @@ Useful API routes:
 
 ## Frontend
 
+Requirements:
+
+- Node.js
+- npm
+
 ```bash
 cd frontend
 npm install
@@ -66,6 +76,38 @@ To point the frontend at a different backend URL:
 ```bash
 set VITE_API_URL=http://localhost:8080/api
 npm run dev
+```
+
+For PowerShell:
+
+```powershell
+$env:VITE_API_URL="http://localhost:8080/api"
+npm run dev
+```
+
+## Run Both Apps
+
+Open two terminals.
+
+Terminal 1:
+
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+Terminal 2:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:5173
 ```
 
 ## Database
